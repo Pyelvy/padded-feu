@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padded — Find Your Pad Along España Blvd</title>
+  <meta name="description" content="Padded helps FEU and Manila-area students find bedspaces, rooms, and studio units for rent along España Boulevard — with real walking distances, prices, and amenities.">
+  <meta name="keywords" content="dorm España, boarding house FEU, bedspace Manila, student housing España Blvd, dorm hunter">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="route-strip" aria-hidden="true">
+    <div class="route-strip__track">
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">PAD</span>DED
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="eyebrow" id="greeting">Good day, house hunter</span>
+            <h1>Find your <em>pad</em><br>along España.</h1>
+            <p class="lead">Every bedspace, room, and studio for rent between LRT-2 España and FEU — with real walking times, real prices, no agent fees.</p>
+            <div class="hero__actions">
+              <a href="listings.html" class="btn btn--primary">Browse listings</a>
+              <a href="about.html" class="btn btn--outline">How it works</a>
+            </div>
+          </div>
+          <div class="route-map">
+            <span class="route-map__label">Walking distance from FEU Main Gate</span>
+            <ul class="route-line">
+              <li><strong>FEU Main Gate</strong><span>Starting point · España Blvd.</span></li>
+              <li class="here"><strong>P. Noval &amp; Morayta</strong><span>3–6 min walk · most listings</span></li>
+              <li><strong>Lacson &amp; Dagohoy</strong><span>8–12 min walk · quieter streets</span></li>
+              <li><strong>LRT-2 España Station</strong><span>5 min walk · commute out</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <form class="search-panel" id="homeSearch" action="listings.html" method="get">
+        <div class="field">
+          <label for="q">Search street or dorm name</label>
+          <input type="text" id="q" name="q" placeholder="e.g. Morayta, Casa España">
+        </div>
+        <div class="field">
+          <label for="type">Room type</label>
+          <select id="type" name="type">
+            <option value="">Any type</option>
+            <option value="Shared Unit">Shared Unit</option>
+              <option value="Bedspace">Bedspace</option>
+            <option value="Room for 2">Room for 2</option>
+            <option value="Studio">Studio</option>
+            <option value="Whole Unit">Whole Unit</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget">Max budget</label>
+          <select id="budget" name="budget">
+            <option value="">Any budget</option>
+            <option value="3000">₱3,000</option>
+            <option value="5000">₱5,000</option>
+            <option value="8000">₱8,000</option>
+            <option value="15000">₱15,000</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--dark">Search</button>
+      </form>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="stat-strip">
+          <div class="stat-strip__item">
+            <span class="stat-strip__num" id="statCount">10</span>
+            <span class="stat-strip__label">Active listings</span>
+          </div>
+          <div class="stat-strip__item">
+            <span class="stat-strip__num">₱3,800</span>
+            <span class="stat-strip__label">Cheapest shared unit</span>
+          </div>
+          <div class="stat-strip__item">
+            <span class="stat-strip__num">7 min</span>
+            <span class="stat-strip__label">Closest to FEU</span>
+          </div>
+          <div class="stat-strip__item">
+            <span class="stat-strip__num" id="statTime">--:--</span>
+            <span class="stat-strip__label">Manila time now</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured this week</h2>
+          <p>A quick look at what's open near FEU right now. See everything on the full listings page.</p>
+        </div>
+        <div class="listing-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <section class="section--dark">
+      <div class="container">
+        <div class="section-head">
+          <h2>How Padded works</h2>
+          <p>Three stops between "still looking" and "moved in."</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="step__num">01</span>
+            <h3>Filter by budget &amp; type</h3>
+            <p>Set your max rent and the kind of space you want — bedspace, shared room, or your own studio.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">02</span>
+            <h3>Check the walk time</h3>
+            <p>Every listing shows minutes on foot from FEU Main Gate, so you know your actual commute.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">03</span>
+            <h3>Message the landlord</h3>
+            <p>Send an inquiry straight through the contact page — no middleman, no booking fee.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Padded</h4>
+          <p style="max-width:38ch;opacity:.85;font-size:.9rem;">A student mini-project: a listings site for bedspaces and rooms along España Boulevard, built for a FEU Tech web development course.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Area</h4>
+          <ul>
+            <li>España Blvd.</li>
+            <li>FEU — Sampaloc, Manila</li>
+            <li>LRT-2 España Station</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Padded — class mini-project, not an actual listings service.</span>
+        <span id="footerTime"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Padded | Ask About a Listing on España Blvd</title>
+  <meta name="description" content="Get in touch with Padded about a listing along España Boulevard, or send feedback on the site. Includes inquiry form and frequently asked questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="route-strip" aria-hidden="true">
+    <div class="route-strip__track">
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand"><span class="brand__mark">PAD</span>DED</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding-bottom:24px;">
+      <div class="container">
+        <span class="eyebrow">Get in touch</span>
+        <h1 style="font-size:clamp(2rem,4.5vw,3rem);color:var(--ink);">Questions about a pad?</h1>
+        <p class="lead" style="margin-bottom:0;">Send an inquiry about a specific listing, report an outdated post, or just say hi.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="form-card">
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Juan Dela Cruz" autocomplete="name">
+                <span class="error" id="err-fullName">Please enter your full name (at least 2 characters).</span>
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="juan@email.com" autocomplete="email">
+                <span class="error" id="err-email">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-row">
+                <label for="phone">Mobile number</label>
+                <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" autocomplete="tel">
+                <span class="error" id="err-phone">Please enter a valid PH mobile number (11 digits, starts with 09).</span>
+              </div>
+
+              <div class="form-row">
+                <label for="topic">What is this about?</label>
+                <select id="topic" name="topic">
+                  <option value="">Select one</option>
+                  <option value="listing">A specific listing</option>
+                  <option value="report">Reporting outdated info</option>
+                  <option value="landlord">I want to list my property</option>
+                  <option value="other">Something else</option>
+                </select>
+                <span class="error" id="err-topic">Please choose a topic.</span>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us which listing, or what's on your mind..."></textarea>
+                <span class="error" id="err-message">Message should be at least 10 characters.</span>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">Send message</button>
+              <div id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <div>
+            <div class="info-card">
+              <h3>Padded HQ (project office hours)</h3>
+              <p style="margin-bottom:6px;">España Blvd., Sampaloc, Manila</p>
+              <p style="margin-bottom:6px;">Mon–Fri, 9AM–6PM</p>
+              <p style="margin-bottom:0;">hello@padded.example</p>
+            </div>
+
+            <h2 style="font-size:1.3rem;margin-top:28px;">FAQ</h2>
+            <details class="faq" open>
+              <summary>Is Padded a real booking service?</summary>
+              <p style="margin-top:10px;">No — this is a class mini-project built to practice HTML, CSS, JavaScript, SEO basics, Git, and deployment. Listings are illustrative examples.</p>
+            </details>
+            <details class="faq">
+              <summary>Do you charge finder's fees?</summary>
+              <p style="margin-top:10px;">In concept, no. Padded is meant to connect renters and landlords directly without a commission.</p>
+            </details>
+            <details class="faq">
+              <summary>How current are the listings?</summary>
+              <p style="margin-top:10px;">In a real version, listings would refresh weekly. For this project, the dataset is fixed sample data.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Padded</h4>
+          <p style="max-width:38ch;opacity:.85;font-size:.9rem;">A student mini-project: a listings site for bedspaces and rooms along España Boulevard, built for a FEU Tech web development course.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Area</h4>
+          <ul>
+            <li>España Blvd.</li>
+            <li>FEU — Sampaloc, Manila</li>
+            <li>LRT-2 España Station</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Padded — class mini-project, not an actual listings service.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

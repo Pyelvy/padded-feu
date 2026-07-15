@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Dorm Details — Padded</title>
+  <meta name="description" content="Full details, rates, and amenities for this dorm listing near FEU, España Blvd., Manila.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+  <div class="route-strip" aria-hidden="true">
+    <div class="route-strip__track">
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand"><span class="brand__mark">PAD</span>DED</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html" aria-current="page">Listings</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding-bottom:12px;">
+      <div class="container">
+        <a href="listings.html" class="btn btn--outline" style="margin-bottom:20px;box-shadow:none;">← Back to listings</a>
+
+        <div class="detail-header">
+          <div>
+            <span class="eyebrow" id="dormType">Listing</span>
+            <h1 id="dormName" style="font-size:clamp(1.8rem,4vw,2.6rem);color:var(--ink);">Loading…</h1>
+            <p class="card__street" id="street" style="font-size:.95rem;"></p>
+          </div>
+          <div class="chip-row" id="dormBadges"></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="container detail-grid">
+
+        <div class="detail-main">
+          <div id="gallery" class="detail-gallery"></div>
+
+          <div class="detail-card">
+            <h2>Rates</h2>
+            <div id="price" class="rates-grid"></div>
+          </div>
+
+          <div class="detail-card">
+            <h2>Amenities</h2>
+            <ul id="amenities" class="amenities-grid"></ul>
+          </div>
+        </div>
+
+        <aside class="detail-side">
+          <div class="detail-card detail-card--sticky">
+            <h3 style="margin-bottom:14px;">Quick facts</h3>
+            <dl class="fact-list">
+              <div><dt>Walking distance</dt><dd><span id="walk"></span> min to FEU</dd></div>
+              <div><dt>Room type</dt><dd id="type"></dd></div>
+              <div><dt>Gender</dt><dd id="gender"></dd></div>
+            </dl>
+            <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;margin-top:8px;">Inquire →</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Padded</h4>
+          <p style="max-width:38ch;opacity:.85;font-size:.9rem;">A student mini-project: a listings site for bedspaces and rooms along España Boulevard, built for a FEU Tech web development course.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Area</h4>
+          <ul>
+            <li>España Blvd.</li>
+            <li>FEU — Sampaloc, Manila</li>
+            <li>LRT-2 España Station</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Padded — class mini-project, not an actual listings service.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/details.js"></script>
+</body>
+</html>

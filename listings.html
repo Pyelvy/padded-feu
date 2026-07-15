@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings — Padded | Dorms &amp; Bedspaces Along España Blvd</title>
+  <meta name="description" content="Browse every bedspace, shared room, studio, and whole unit for rent along España Boulevard near FEU — filter by type, budget, and walking distance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="route-strip" aria-hidden="true">
+    <div class="route-strip__track">
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+      <span>LRT-2 ESPAÑA</span><span>→</span><span>FEU MAIN GATE</span><span>→</span><span>P. NOVAL</span><span>→</span><span>MORAYTA</span><span>→</span><span>LACSON</span><span>→</span><span>DAGOHOY</span><span>→</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand"><span class="brand__mark">PAD</span>DED</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html" aria-current="page">Listings</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding-bottom:24px;">
+      <div class="container">
+        <span class="eyebrow">10 places currently listed</span>
+        <h1 style="font-size:clamp(2rem,4.5vw,3rem);color:var(--ink);">All listings</h1>
+        <p class="lead" style="margin-bottom:0;">Every bedspace, room, and unit currently open along España Boulevard, from LRT-2 to Dagohoy St.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="container">
+        <form class="search-panel" id="listingSearch" style="margin-top:0;">
+          <div class="field">
+            <label for="q">Search street or dorm name</label>
+            <input type="text" id="q" name="q" placeholder="e.g. Morayta, Casa España">
+          </div>
+          <div class="field">
+            <label for="type">Room type</label>
+            <select id="type" name="type">
+              <option value="">Any type</option>
+              <option value="Shared Unit">Shared Unit</option>
+              <option value="Bedspace">Bedspace</option>
+              <option value="Room for 2">Room for 2</option>
+              <option value="Studio">Studio</option>
+              <option value="Whole Unit">Whole Unit</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="budget">Max budget</label>
+            <select id="budget" name="budget">
+              <option value="">Any budget</option>
+              <option value="3000">₱3,000</option>
+              <option value="5000">₱5,000</option>
+              <option value="8000">₱8,000</option>
+              <option value="15000">₱15,000</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn--dark" id="clearFilters">Clear</button>
+        </form>
+
+        <div class="filter-bar" id="genderFilters" style="margin-top:22px;">
+          <button class="filter-btn is-active" data-gender="all">All genders</button>
+          <button class="filter-btn" data-gender="Male">Male</button>
+          <button class="filter-btn" data-gender="Female">Female</button>
+          <button class="filter-btn" data-gender="Co-ed">Co-ed</button>
+        </div>
+
+        <p class="tally" id="resultsTally" style="margin-bottom:20px;">Showing 10 of 10 listings</p>
+
+        <div class="listing-grid" id="listingGrid"></div>
+        <div class="results-empty" id="emptyState" style="display:none;">
+          No listings match those filters yet — try widening your budget or clearing a filter.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Padded</h4>
+          <p style="max-width:38ch;opacity:.85;font-size:.9rem;">A student mini-project: a listings site for bedspaces and rooms along España Boulevard, built for a FEU Tech web development course.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Area</h4>
+          <ul>
+            <li>España Blvd.</li>
+            <li>FEU — Sampaloc, Manila</li>
+            <li>LRT-2 España Station</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Padded — class mini-project, not an actual listings service.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/listings-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/listings.js"></script>
+</body>
+</html>
